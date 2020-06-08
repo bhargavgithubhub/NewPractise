@@ -1,0 +1,35 @@
+Endpoint=http://localhost:8082/axis2/services/EmployeeManagementService.EmployeeManagementServiceHttpSoap12Endpoint/
+Username=
+Password=
+Domain=
+AuthType=No Authorization
+Request=<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:typ="http://sample.com/reservation/guest/types">\
+   <soap:Header/>\
+   <soap:Body>\
+      <typ:getEmployeeDetails>\
+         <!--Optional:-->\
+         <typ:employeeName>soap</typ:employeeName>\
+      </typ:getEmployeeDetails>\
+   </soap:Body>\
+</soap:Envelope>
+Response=<soapenv:Envelope xmlns:soapenv="http://www.w3.org/2003/05/soap-envelope">\
+   <soapenv:Body>\
+      <ns:getEmployeeDetailsResponse xmlns:ns="http://sample.com/reservation/guest/types">\
+         <ns:return xsi:type="ns:Employee" xmlns:ax21="http://exception.reservation.sample.com/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">\
+            <ns:age>33</ns:age>\
+            <ns:department>mysql</ns:department>\
+            <ns:id>454</ns:id>\
+            <ns:name>soap</ns:name>\
+         </ns:return>\
+      </ns:getEmployeeDetailsResponse>\
+   </soapenv:Body>\
+</soapenv:Envelope>
+RawRequest=<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:typ="http://sample.com/reservation/guest/types">\
+   <soap:Header/>\
+   <soap:Body>\
+      <typ:getEmployeeDetails>\
+         <!--Optional:-->\
+         <typ:employeeName>soap</typ:employeeName>\
+      </typ:getEmployeeDetails>\
+   </soap:Body>\
+</soap:Envelope>
